@@ -1,4 +1,4 @@
-package com.hds.springboot2jparest.springboot2jparestmysql;
+package com.hds.springboot2jparest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
