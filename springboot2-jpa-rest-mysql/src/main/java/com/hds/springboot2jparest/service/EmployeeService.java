@@ -28,6 +28,8 @@ public interface EmployeeService {
 	ResponseEntity<Employee> updateEmployee(Long id,  Employee emp) throws ResourceNotFoundException;
 
 	Map<String, Boolean> deleteEmployee(Long id)throws ResourceNotFoundException;
+
+	ResponseEntity<Employee> patchEmployee(Long id, @Valid Employee emp)throws ResourceNotFoundException;
 	
 	
 }

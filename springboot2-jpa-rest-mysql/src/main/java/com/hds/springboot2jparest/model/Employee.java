@@ -2,6 +2,7 @@
  * 
  */
 package com.hds.springboot2jparest.model;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,9 +22,10 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id ;
-    private String first_name;
-	
-	private String last_name;
+	@Column(name="first_name")
+    private String firstname;
+	@Column(name="last_name")
+	private String lastname;
 	
 	private String email;
 	
@@ -45,29 +47,29 @@ public class Employee {
 	/**
 	 * @return the first_name
 	 */
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstname() {
+		return firstname;
 	}
 
 	/**
 	 * @param first_name the first_name to set
 	 */
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirst_name(String firstname) {
+		this.firstname = firstname;
 	}
 
 	/**
 	 * @return the last_name
 	 */
-	public String getLast_name() {
-		return last_name;
+	public String getLastname() {
+		return lastname;
 	}
 
 	/**
 	 * @param last_name the last_name to set
 	 */
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLast_name(String lastname) {
+		this.lastname = lastname;
 	}
 
 	/**
@@ -104,7 +106,8 @@ public class Employee {
 	 */
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", email=" + email
+		return "Employee [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", email=" + email
 				+ ", phone=" + phone + "]";
 	}
+
 }
